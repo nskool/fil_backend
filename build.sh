@@ -283,7 +283,7 @@ buildpy () {
   then
     rm -rf "$server_repo"
   fi
-  git clone https://github.com/triton-inference-server/server.git \
+  git clone https://github.com/nskool/server.git \
     "${server_repo}" \
     -b $TRITON_REF \
     --depth 1
