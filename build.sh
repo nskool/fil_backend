@@ -285,7 +285,7 @@ buildpy () {
   fi
   git clone https://github.com/nskool/server.git \
     "${server_repo}" \
-    -b $TRITON_REF \
+    -b sagemaker_mme \
     --depth 1
 
   pushd "${server_repo}"
