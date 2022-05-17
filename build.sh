@@ -300,7 +300,7 @@ buildpy () {
     --repo-tag=core:$CORE_REF \
     --repo-tag=backend:$BACKEND_REF \
     --repo-tag=thirdparty:$THIRDPARTY_REF \
-    --backend=fil:$branch
+    --backend=fil:sagemaker_mme
   docker tag tritonserver:latest $SERVER_TAG
 
   popd
