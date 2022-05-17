@@ -300,7 +300,8 @@ buildpy () {
     --repo-tag=core:$CORE_REF \
     --repo-tag=backend:$BACKEND_REF \
     --repo-tag=thirdparty:$THIRDPARTY_REF \
-    --backend=fil:sagemaker_mme
+    --backend=fil:sagemaker_mme \
+    --github-organization https://www.github.com/nskool
   docker tag tritonserver:latest $SERVER_TAG
 
   popd
