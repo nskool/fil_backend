@@ -216,11 +216,11 @@ else
   # If TRITON_VERSION has not been set, these values will only be used for a
   # full build.py build, so it is safe to default to main rather than a release
   # branch.
-  [ ! -z $TRITON_REF ] || TRITON_REF='main'
-  [ ! -z $COMMON_REF ] || COMMON_REF='main'
-  [ ! -z $CORE_REF ] || CORE_REF='main'
-  [ ! -z $BACKEND_REF ] || BACKEND_REF='main'
-  [ ! -z $THIRDPARTY_REF ] || THIRDPARTY_REF='main'
+  [ ! -z $TRITON_REF ] || TRITON_REF='sagemaker_mme'
+  [ ! -z $COMMON_REF ] || COMMON_REF='sagemaker_mme'
+  [ ! -z $CORE_REF ] || CORE_REF='sagemaker_mme'
+  [ ! -z $BACKEND_REF ] || BACKEND_REF='sagemaker_mme'
+  [ ! -z $THIRDPARTY_REF ] || THIRDPARTY_REF='sagemaker_mme'
 fi
 
 if [ ! -z $SDK_IMAGE ]
