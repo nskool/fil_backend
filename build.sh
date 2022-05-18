@@ -207,11 +207,11 @@ then
   # If the user has specified a TRITON_VERSION (or if we are performing a host
   # build), set the upstream repo references to the corresponding branches
   # (unless otherwise specified by the user)
-  [ ! -z $TRITON_REF ] || TRITON_REF="r${TRITON_VERSION}"
-  [ ! -z $COMMON_REF ] || COMMON_REF="r${TRITON_VERSION}"
-  [ ! -z $CORE_REF ] || CORE_REF="r${TRITON_VERSION}"
-  [ ! -z $BACKEND_REF ] || BACKEND_REF="r${TRITON_VERSION}"
-  [ ! -z $THIRDPARTY_REF ] || THIRDPARTY_REF="r${TRITON_VERSION}"
+  [ ! -z $TRITON_REF ] || TRITON_REF='sagemaker_mme'
+  [ ! -z $COMMON_REF ] || COMMON_REF='sagemaker_mme'
+  [ ! -z $CORE_REF ] || CORE_REF='sagemaker_mme'
+  [ ! -z $BACKEND_REF ] || BACKEND_REF='sagemaker_mme'
+  [ ! -z $THIRDPARTY_REF ] || THIRDPARTY_REF='sagemaker_mme'
 else
   # If TRITON_VERSION has not been set, these values will only be used for a
   # full build.py build, so it is safe to default to main rather than a release
@@ -296,10 +296,10 @@ buildpy () {
     --enable-stats \
     --endpoint=http \
     --endpoint=grpc \
-    --repo-tag=common:$COMMON_REF \
-    --repo-tag=core:$CORE_REF \
-    --repo-tag=backend:$BACKEND_REF \
-    --repo-tag=thirdparty:$THIRDPARTY_REF \
+    --repo-tag=common:sagemaker_mme \
+    --repo-tag=core:sagemaker_mme \
+    --repo-tag=backend:sagemaker_mme \
+    --repo-tag=thirdparty:sagemaker_mme \
     --backend=fil:sagemaker_mme \
     --github-organization https://www.github.com/nskool
   docker tag tritonserver:latest $SERVER_TAG
