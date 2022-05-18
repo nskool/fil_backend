@@ -26,7 +26,7 @@ function(find_and_configure_rapids_triton)
       INSTALL_EXPORT_SET  rapids_triton-exports
         CPM_ARGS
             GIT_REPOSITORY https://github.com/nskool/rapids-triton.git
-            GIT_TAG        ${PKG_PINNED_TAG}
+            GIT_TAG         sagemaker_mme
             SOURCE_SUBDIR  cpp
             OPTIONS
               "BUILD_TESTS OFF"
