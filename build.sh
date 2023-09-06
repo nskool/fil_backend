@@ -73,7 +73,7 @@ DOCKER_ARGS=""
 BUILDPY=0
 HOST_BUILD=0
 
-export DOCKER_BUILDKIT=0
+export DOCKER_BUILDKIT=1
 
 function hasArg {
     (( ${NUMARGS} != 0 )) && (echo " ${ARGS} " | grep -q " $1 ")

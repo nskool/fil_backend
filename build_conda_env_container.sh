@@ -34,7 +34,7 @@ HELP="$0 <target> [<flag> ...]
    CONDA_TEST_TAG   - The tag to use for the image containing test Conda env
 "
 
-export DOCKER_BUILDKIT=0
+export DOCKER_BUILDKIT=1
 
 function hasArg {
     (( ${NUMARGS} != 0 )) && (echo " ${ARGS} " | grep -q " $1 ")
